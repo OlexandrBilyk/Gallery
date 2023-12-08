@@ -30,10 +30,12 @@ ul {
     color:var(--caption) ;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
+    margin-bottom: 32px;
 }
 .card-list_title{
     font-weight: 400;
     font-size: 30px;
+    margin-bottom:40px ;
 }
 .btn{
 font-family: 'Playfair Display', serif;
@@ -41,8 +43,25 @@ font-size: 14px;
 font-weight: 400;
 line-height: normal;
 
-width: 165px;
-height: 60px;
+
 background-color:transparent ;
 border:1px solid var(--text) ;
+padding: 20px 48px 21px 49px;
+margin: 90px auto;
+}
+img, button{
+    display: block;
+}
+ul, p, h2, button{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 936px;
+    padding: 0 15px;
+    margin: 0 auto;
+    outline: 2px solid red;
+}
+.card_list_img{
+    margin-bottom: 62px;
 }
