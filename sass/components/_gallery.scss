@@ -1,0 +1,36 @@
+.card-list{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 64px;
+    row-gap: 130px;
+}
+.card_list_img{
+    margin-bottom: 62px;
+}
+.card-list_item{
+    width: 420px;
+}
+.card-list_text{
+    color:var(--caption) ;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    margin-bottom: 32px;
+}
+.card-list_title{
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom:40px ;
+}
+.btn{
+font-family: 'Playfair Display', serif;
+font-size: 14px;
+font-weight: 400;
+line-height: normal;
+cursor: pointer;
+
+
+background-color:transparent ;
+border:1px solid var(--text) ;
+padding: 20px 48px 21px 49px;
+margin: 90px auto;
+}

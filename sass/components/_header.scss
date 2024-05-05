@@ -1,0 +1,15 @@
+header{
+    padding: 70px 0 92px;
+}
+.nav-list{
+    display: flex;
+    gap: 99px;
+    justify-content: center;
+}
+.nav-list_link{
+    color:var(--nav);
+    
+    &:hover{
+        color:var(--hover);
+    }
+}
