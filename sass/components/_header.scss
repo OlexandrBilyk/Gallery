@@ -5,11 +5,12 @@ header{
     display: flex;
     gap: 99px;
     justify-content: center;
-}
-.nav-list_link{
-    color:var(--nav);
+    &__link{
+        transition: color 250ms ease;
+        color:getColor("nav");
     
-    &:hover{
-        color:var(--hover);
+        &:hover{
+            color:getColor("hover");
+        }
     }
 }

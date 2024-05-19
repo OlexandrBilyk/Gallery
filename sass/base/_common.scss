@@ -4,10 +4,6 @@ html{
 img, button{
     display: block;
 }
-ul, p, h2, button{
-    padding: 0;
-    margin: 0;
-}
 .container{
     width: 936px;
     padding: 0 15px;
@@ -20,12 +16,6 @@ body{
     font-style: normal;
     line-height: normal;
     font-weight: 400;
-    color: var(--text);
+    color: getColor("text");
     
-}
-a {
-    text-decoration: none;
-}
-ul {
-    list-style-type: none;
 }
