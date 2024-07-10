@@ -1,45 +1,46 @@
-.card-list{
-    display: grid;
-    grid-template-columns: repeat(2, 420px);
-    gap: 65px;
-        &__item{
-            height: 516px;
-        }
+.card-list {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 65px;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+  &__item {
+    flex: 1 1 100%;
+    height: 516px;
+
+    @media (min-width: 768px) {
+      flex-basis: calc((100% - 130px) / 2);
+    }
+  }
 }
-.card{
-    &__thumb{
-        width: 420px;
-        height: 280px;
-        margin-bottom: 62px;
-    }
-    &__img{
-        object-fit: cover;
-        object-position: center;
-        width: 100%;
-        height: 100%;
-    }
-    &__text{
-        color:getColor("caption") ;
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: 300;
-        margin-bottom: 32px;
-    }
-    &__title{
-        font-weight: 400;
-        font-size: 30px;
-        margin-bottom:40px;
-    }
-}
-.btn{
-    font-family: 'Playfair Display', serif;
-    font-size: 14px;
+.card {
+  &__thumb {
+    width: 100%;
+    height: 280px;
+    margin-bottom: 62px;
+  }
+  &__img {
+    @extend %img;
+  }
+  &__text {
+    color: getColor("caption");
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    margin-bottom: 32px;
+  }
+  &__title {
     font-weight: 400;
-    line-height: normal;
-    cursor: pointer;
-    
-    
-    background-color:transparent ;
-    border:1px solid getColor("text") ;
-    padding: 20px 48px 21px 49px;
-    margin: 90px auto;
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+}
+.btn {
+  font-family: "Playfair Display", serif;
+  line-height: normal;
+  cursor: pointer;
+
+  @include btn(getColor("text"), transparent, 1px solid getColor("text"));
+  padding: 20px 48px 21px 49px;
+  margin: 90px auto;
 }

@@ -1,16 +1,95 @@
-header{
+.header {
+  padding: 20px 0 30px;
+  @media (min-width: 768px) {
     padding: 70px 0 92px;
+    display: block;
+  }
 }
-.nav-list{
+.navigation {
+  overflow: hidden;
+  order: 1;
+}
+.toggle-label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+.toggle-span,
+.toggle-span::before,
+.toggle-span::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  top: 5px;
+  right: 0;
+  transition: 250ms;
+}
+.toggle-span {
+  top: 5px;
+}
+.toggle-span::before {
+  top: 10px;
+}
+.toggle-span::after {
+  top: 20px;
+}
+.nav-list {
+  transform: translateY(-500%);
+  transition: transform 250ms ease;
+  @extend %flexiable;
+  gap: 99px;
+
+  @media (max-width: 767px) {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    background-color: #fff;
+  }
+  @media (min-width: 768px) {
+    transform: none;
     display: flex;
-    gap: 99px;
-    justify-content: center;
-    &__link{
-        transition: color 250ms ease;
-        color:getColor("nav");
-    
-        &:hover{
-            color:getColor("hover");
-        }
+  }
+  &__link {
+    transition: color 250ms ease;
+    color: getColor("nav");
+    font-size: 20px;
+    @media (min-width: 768px) {
+      font-size: 14px;
     }
+    &:hover {
+      color: getColor("hover");
+    }
+  }
+}
+.toggle-input:checked ~ .nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transform: translateY(0);
+}
+.toggle-input {
+  display: none;
+}
+.toggle-input:checked ~ .toggle-label .toggle-span {
+  top: 15px;
+  transform: rotate(-45deg);
+}
+.toggle-input:checked ~ .toggle-label .toggle-span::before {
+  top: 0;
+  transform: rotate(0);
+}
+.toggle-input:checked ~ .toggle-label .toggle-span::after {
+  top: 0;
+  transform: rotate(90deg);
 }
